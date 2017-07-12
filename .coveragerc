@@ -1,0 +1,4 @@
+[run]
+omit =
+    glycemic_load/tests/*
+    venv/*
