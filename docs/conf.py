@@ -31,16 +31,16 @@ autosummary_generate = True
 master_doc = 'index'
 
 # General information about the project.
-project = 'Glycemic Load'
+project = 'Hyppo'
 author = 'Tim Diels'
 copyright = '2017, ' + author  # @ReservedAssignment
-pypi_name = 'glycemic_load'
+pypi_name = 'hyppo'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-from glycemic_load import __version__
+from hyppo import __version__
 release = __version__  # The full version, including alpha/beta/rc tags.
 version = release  # The short X.Y version.
 

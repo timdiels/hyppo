@@ -5,16 +5,19 @@ import os
 
 setup_args = dict(
     version='0.0.1.dev1',
-    name='glycemic_load',
+    name='hyppo',
     description='Calculate the glycemic load of your MyFitnessPal logs',
     long_description=Path('README.rst').read_text(),
-    url='https://github.com/timdiels/glycemic-load',
+    url='https://github.com/timdiels/hyppo',
     author='Tim Diels',
     author_email='timdiels.m@gmail.com',
     license='LGPL3',
     keywords='myfitnesspal health app glycemic-load glycemic-index glucose blood-sugar sugar glycemic',
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+        'cython',
+        'kivy',
+    ],
     extras_require={
         'dev': [
             'numpydoc==0.*',
@@ -44,6 +47,9 @@ setup_args = dict(
         'Programming Language :: Python :: 3.6',
         'Topic :: Other/Nonlisted Topic',
     ],
+    entry_points={'console_scripts': [
+        'hyppo = hyppo.main:main',
+    ]}
 )
 
 # Generate extras_require['all'], union of all extras
